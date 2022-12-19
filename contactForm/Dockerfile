@@ -1,0 +1,4 @@
+FROM openjdk:17-jdk
+RUN mkdir -p /home/app/
+ADD target/ContactForm.jar /home/app/ContactForm.jar
+CMD ["java","-jar","/home/app/ContactForm.jar"]
