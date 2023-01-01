@@ -14,8 +14,11 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import lombok.extern.slf4j.Slf4j;
+
 @SpringBootApplication
 @EnableEurekaClient
+@Slf4j
 public class ContactFormApplication
 {
 	public static void main(String[] args)
@@ -40,6 +43,7 @@ public class ContactFormApplication
 		CorsConfiguration config = new CorsConfiguration();
 		config.setAllowCredentials(true);
 		
+		log.debug(allowedOrigins.toString());
 		config.setAllowedOriginPatterns(allowedOrigins);
 		config.addAllowedHeader("*");
 		config.addAllowedMethod("*");
