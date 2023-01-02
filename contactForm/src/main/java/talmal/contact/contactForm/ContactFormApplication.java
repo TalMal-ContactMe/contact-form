@@ -43,6 +43,7 @@ public class ContactFormApplication
 		CorsConfiguration config = new CorsConfiguration();
 		config.setAllowCredentials(true);
 		
+		log.debug("---------------------------------------------------");
 		log.debug(allowedOrigins.toString());
 		config.setAllowedOriginPatterns(allowedOrigins);
 		config.addAllowedHeader("*");
